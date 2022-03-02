@@ -6,23 +6,24 @@ con difficoltà 3 => tra 1 e 49
 */
 
 const selDifficulty = document.getElementById('select-opt');
-const btnPlay =  document.getElementById('playbtn');
+const play =  document.getElementById('playbtn');
 let containerBox = document.querySelector('.container');
 
-btnPlay.addEventListener('click',function(){
-    function createGrid(max){
-        // let square;
-        let level = selDifficulty.value;
-        // containerBox.innerHTML += square;
-        for (i = 1; i <= max; i++){
-            containerBox.innerHTML += `<div class="square">${i}</div>`; 
-        }    
-        if (level == easy){
-            createGrid(49);
-        } else if (level == medium){
-            createGrid(81);
-        } else{
-            createGrid(100);
-        }
+play.addEventListener('click',function(){
+    
+    let level = selDifficulty.value;
+    console.log(selDifficulty);
+    if (level == easy){
+        createGrid(49);
+    } else if (level == medium){
+        createGrid(81);
+    } else{
+        createGrid(100);
     }
 })
+
+function createGrid(max){
+    for (i = 1; i <= max; i++){
+        containerBox.innerHTML += `<div class="square">${i}</div>`; 
+    }    
+}
