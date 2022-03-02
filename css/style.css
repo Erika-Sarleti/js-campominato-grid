@@ -28,16 +28,27 @@ button{
     margin-left: .3em;
     padding: 0 2em;
 }
-
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    
+    
+}
 .square{
-    width: 20px;
-    height: 20px;
-    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(600px / 10);
+    height: calc(600px / 10);
     border: 1px solid black;
 }
 
 
 section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: calc(100vh - 10rem);
     background-color: aqua;
 }

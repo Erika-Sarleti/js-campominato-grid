@@ -9,28 +9,28 @@ const selDifficulty = document.getElementById('select-opt');
 const play =  document.getElementById('playbtn');
 let containerBox = document.querySelector('.container');
 
-play.addEventListener('click',createGrid())
-    
-    function createGrid(){
-        let level = selDifficulty.value;
+play.addEventListener('click',createGrid)   
+function createGrid(){
+    let level = selDifficulty.value;
 
-        if (level == 'easy') {
-            for (i = 1; i < 49; i++) {
-                containerBox.innerHTML += `<div class="square">${i}</div>`;
-            }
-            
-    
-        } else if (level == 'normal') {
-            for (i = 1; i < 81; i++) {
-               containerBox.innerHTML+ = `<div class="square">${i}</div>`
-            }
-            
-    
-        } else {
-            for (i = 1; i < 100; i++) {
-                containerBox.innerHTML+ = `<div class="square">${i}</div>`
-            }
+    if (level == 'easy') {
+        for (i = 1; i <= 49; i++) {
+            containerBox.innerHTML += `<div class="square">${i}</div>`;
+        }
+        
+
+    } else if (level == 'medium') {
+        for (i = 1; i <= 81; i++) {
+            containerBox.innerHTML+= `<div class="square">${i}</div>`
+        }
+        
+
+    } else {
+        for (i = 1; i <= 100; i++) {
+            containerBox.innerHTML+= `<div class="square">${i}</div>`
+        }
     }
+}
     // function createGrid(max){
         
     //     for (i = 1; i <= max; i++){
