@@ -20,7 +20,7 @@ play.addEventListener('click',createGrid())
             }
             
     
-        } else if (level == 'hard') {
+        } else if (level == 'normal') {
             for (i = 1; i < 81; i++) {
                containerBox.innerHTML+ = `<div class="square">${i}</div>`
             }
